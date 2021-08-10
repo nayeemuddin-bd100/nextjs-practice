@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import ArticleList from '../components/ArticleList';
-import { server } from '../config';
+
+
 export default function Home({ articles }) {
-  console.log(articles)
+
   return (
     <div>
       <Head>
-        <title> WebDev News</title>
+        <title> WebDev Newss</title>
         <meta name="keywords" content="web developement,programming" />
       </Head>
       <h2> Welcome to Next js</h2>
@@ -28,14 +29,31 @@ export default function Home({ articles }) {
 // }
 
 //fetch from local data
+// export const getStaticProps = async () => {
+//   const res = await fetch(`${server}/api/articles`);
+//   // const res = await fetch(`http://localhost:3000/api/articles`);
+//   const articles = await res.json();
+//   return {
+//     props: {
+//       articles,
+//     },
+//   };
+// };
+
+
+
+// work with ISG
+
 export const getStaticProps = async () => {
-  const res = await fetch(`${server}/api/articles`);
-  const articles = await res.json();
+  const res = await fetch(
+    "https://61121c9a89c6d00017ac010a.mockapi.io/api/article/"
+  );
+  const data = await res.json()
+  const articles = data.slice(0,5)
+  
 
   return {
-    props: {
-      articles,
-    },
+    props: { articles },
+    revalidate: 10,
   };
-};
-
+}
