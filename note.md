@@ -59,3 +59,7 @@ The swr is simple libry to fetch data like axios , we crated a page with swr in 
 <!-- bootstrap cdn -->
 
 to use bootstrap cdn we need to add and import head tag in \_app.js file . inside this head tag we can use bootstrap cdn and any other page or component will able to use any bootrap className
+
+<!-- react bootstrap -->
+
+https://medium.com/frontendweb/how-to-add-bootstrap-in-next-js-de997371fd9c
