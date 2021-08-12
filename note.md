@@ -55,3 +55,7 @@ we are discuss elaborately in dashboard page
 ==> SWR
 firstly we have to install the library using npm i swr
 The swr is simple libry to fetch data like axios , we crated a page with swr in dashoard-swr.js. It's much simpler and cleaner than using useEffetc or useState to data fetching
+
+<!-- bootstrap cdn -->
+
+to use bootstrap cdn we need to add and import head tag in \_app.js file . inside this head tag we can use bootstrap cdn and any other page or component will able to use any bootrap className

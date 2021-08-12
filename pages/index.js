@@ -10,7 +10,7 @@ export default function Home({ articles }) {
         <title> WebDev Newss</title>
         <meta name="keywords" content="web developement,programming" />
       </Head>
-      <h2> Welcome to Next js</h2>
+      <h2 className="text-primary text-center"> Welcome to Next js</h2>
       <ArticleList articles={articles} />
     </div>
   );
