@@ -1,4 +1,4 @@
-import { articles } from "../../../data";
+import { articles } from "../../../data/data.js";
 
 export default function handler(req, res) {
     const id = +req.query.id;
