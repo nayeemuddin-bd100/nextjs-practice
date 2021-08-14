@@ -63,3 +63,20 @@ to use bootstrap cdn we need to add and import head tag in \_app.js file . insid
 <!-- react bootstrap -->
 
 https://medium.com/frontendweb/how-to-add-bootstrap-in-next-js-de997371fd9c
+
+<!-- absolutes imports  -->
+
+we can import any absolutes path without ../../
+
+ex: import styles from '../../../styles/something.css
+=> import styles from '/styles/something.css
+
+Therefore, first we have to create a file called jsconfig.json
+inside this file we have to add this line =>
+{
+"compilerOptions":{
+"baseUrl": "."
+}
+}
+
+that's it!!
